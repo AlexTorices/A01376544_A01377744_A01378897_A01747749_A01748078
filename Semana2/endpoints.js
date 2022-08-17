@@ -1,7 +1,7 @@
 
 
 const getAlbumldAsync = async (idAlbum) =>{
-    return "Album por ID";
+    return "Album Async";
 }
 getAlbumldAsync('album').then((mensaje)=>{
     console.log(mensaje);
