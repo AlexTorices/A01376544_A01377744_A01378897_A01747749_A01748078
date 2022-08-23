@@ -28,4 +28,5 @@ const devuelveAlgoAsync = async() =>{
 
 }
 
+getAlbumldAsync()
 devuelveAlgoAsync()
