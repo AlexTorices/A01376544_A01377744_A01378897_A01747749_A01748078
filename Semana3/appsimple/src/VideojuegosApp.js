@@ -25,6 +25,10 @@ const VideojuegosApp = ({ nombre }) => {
         setCantidadVideojuegos(cantidadVideojuegos - 1);
     }
 
+    const reiniciar = (e) => {
+        setCantidadVideojuegos(0);
+    }
+
     return (
         <>
             <h1>{titulo}</h1>
@@ -48,6 +52,8 @@ https://reactjs.org/docs/events.html
                 Videojuegos</button>
             <button onClick={(e) => { decrementaVideojuegos(e) }}>Decrementar
                 Videojuegos</button>
+            <button onClick={(e) => { reiniciar(e) }}>Reiniciar 
+                Contador</button>
             {/* 
     Colocamos la cantidad de videojuegos que tenemos. Utilizamos 
 el valor de 
