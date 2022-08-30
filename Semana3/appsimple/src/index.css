@@ -12,3 +12,18 @@ html, body{
      margin-right: 5px; 
      padding: 5px; 
  } 
+ img {
+  width: 1000x;
+  height: 1000px;
+  object-fit: contain;
+  border: black;
+  border-style: double;
+  border-radius: 40px;
+  border-width: 10px;
+ }
+ h1{
+  font-size: xx-large;
+ }
+ p{
+  font-size: xx-large;
+ }
