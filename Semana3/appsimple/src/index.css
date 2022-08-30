@@ -13,8 +13,8 @@ html, body{
      padding: 5px; 
  } 
  img {
-  width: 1000x;
-  height: 1000px;
+  width: 300x;
+  height: 300px;
   object-fit: contain;
   border: black;
   border-style: double;
