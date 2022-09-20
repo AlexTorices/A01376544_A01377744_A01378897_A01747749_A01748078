@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react'; 
+import React, { useEffect, useState } from 'react'; 
  
 export const Mensaje = () => { 
- 
+    
+    const [coords, setCoords] = useState({x: null, y: null});
+
     //Implementamos useEffect con cleanup. No tiene ninguna dependencia (en su segundo parámetro) por lo cual 
     // este useEffect se va ejecutar solamente cuando el componente se ejecute por primera vez. 
     useEffect(() => { 
@@ -9,8 +11,11 @@ export const Mensaje = () => {
  
         //Encapsulamos la funcionalidad de las coordenadas en una función. 
         const mouseMove = (e) => { 
-            const coordenadas = { x: e.x, y: e.y }; 
-            console.log(coordenadas); 
+            setCoords({
+                x: e.x,
+                y: e.y,
+              });
+            //console.log(coordenadas); 
         } 
  
         //Obtenemos las coordenadas X y Y del mouse y las mostramos en la consola del navegador. Mandamos llamar 
@@ -25,9 +30,9 @@ export const Mensaje = () => {
     }, []); 
  
     return ( 
-        <> 
-            <h3>Este es un mensaje...</h3> 
-        </> 
-         ) 
+      <h2>
+        Coordenadas: {coords.x} {coords.y}
+      </h2>
+  );
 } 
          
