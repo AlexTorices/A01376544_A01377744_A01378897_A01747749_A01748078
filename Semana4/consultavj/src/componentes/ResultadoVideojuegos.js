@@ -43,9 +43,9 @@ export const ResultadoVideojuegos = ({ genero }) => {
         <>
             <h3 className="card-title">{genero}</h3>
             {/*
-Creamos la lista de juegos con la información que recuperamos de la invocación del api de RAWG,
-utilizando la variable infoJuegos que obtuvimos en la desestructuración del hook useState.
- */}
+            Creamos la lista de juegos con la información que recuperamos de la invocación del api de RAWG,
+            utilizando la variable infoJuegos que obtuvimos en la desestructuración del hook useState.
+            */}
             <InfoVideojuegos infoJuegos={infoJuegos}/>
         </>
     )
