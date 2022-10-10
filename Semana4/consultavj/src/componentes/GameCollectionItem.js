@@ -1,28 +1,30 @@
-import React from "react"
+import React from "react";
 
-export const GameCollectionItem = ({todo, handleDeleteTodo}) => { 
-    return(
+export const GameCollectionItem = ({ game, handleDeleteGame }) => {
+
+    return (
         <>
-            <div className="d-flex flex-wrap ">
-            {
-                infoJuegos.map(({ id, imagen, nombre, rating, metacritic }) => (
-                    <div key={todo.id} className="card w-25">
-                        <img src={imagen} class="card-img-top" alt="imagen"/>
-                        <div className='card-body'>
-                            <h5 className="card-title"> {nombre}</h5>
-                            <p className='card-text'>Rating: {rating}</p>
-                            <p className='card-text'>Metacritic: {metacritic}/100</p>
-                    </div>
-                    <button 
-                         className="btn-danger" 
-                            onClick={() => handleDeleteTodo(todo.id)} 
-                > 
-                            Borrar 
-                    </button> 
-                    </div>
-                ))
-            }
+            <div className="card text-center text-black bg-white mb-3" style={{ width: "20rem" }} background="#C2897D">
+                <div className="card-body">
+                    <img
+                        src={game.juego.background_image}
+                        alt="GAME"
+                        style={{ width: "100%" }}
+                        width="20rem"
+                        height="200rem"
+                    />
+                    <br /><br />
+                    <h5 className="card-title">{game.juego.name}</h5>
+                    <p className="card-text">Rating: {game.juego.rating}</p>
+                    <p className="card-text">Metacritic: {game.juego.metacritic}/100</p>
+                    <button
+                        className="btn btn-danger"
+                        onClick={() => handleDeleteGame(game.id)}
+                    >
+                        Borrar
+                    </button>
+                </div>
             </div>
         </>
-    )
-}
+    );
+};
