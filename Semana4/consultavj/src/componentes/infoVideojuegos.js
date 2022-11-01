@@ -5,9 +5,9 @@ export const InfoVideojuegos = ({infoJuegos}) => {
         <>
             <div className="d-flex flex-wrap ">
             {
-                infoJuegos.map(({ id, imagen, nombre, rating, metacritic }) => (
+                infoJuegos?.map(({ id, imagen, nombre, rating, metacritic }) => (
                     <div key={id} className="card w-25">
-                        <img src={imagen} class="card-img-top" alt="imagen"/>
+                        <img src={imagen} className="card-img-top" alt="imagen"/>
                         <div className='card-body'>
                             <h5 className="card-title"> {nombre}</h5>
                             <p className='card-text'>Rating: {rating}</p>

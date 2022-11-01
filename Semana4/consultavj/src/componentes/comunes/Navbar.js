@@ -38,6 +38,15 @@ tiene que indicar y enviar al Router.
                     > 
                         Salir 
                     </NavLink> 
+
+                    <NavLink 
+                       className={({ isActive }) => isActive ? "active" : "nav-item nav-link"} 
+                       exact="true" 
+                       to="/buscar" 
+                    > 
+                       Buscar 
+                    </NavLink>                          
+... 
                 </div> 
             </div> 
         </nav> 
