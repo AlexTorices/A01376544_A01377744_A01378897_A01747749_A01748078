@@ -22,7 +22,7 @@ export const BuscadorScreen = () => {
  
     const [formValues, handleInputChange] = useForm({ 
         criterioBusqueda: busqueda 
-    }); 
+    });
  
     const { criterioBusqueda } = formValues; 
  
@@ -36,6 +36,17 @@ export const BuscadorScreen = () => {
         //Generamos el query string en la URL 
         navigate(`?busqueda=${criterioBusqueda}`); 
     } 
+
+    const juegos = juegosFiltrados?.map(juego => {
+        return {
+            id: juego.id,
+            nombre: juego.name,
+            imagen: juego.background_image,
+            rating: juego.rating,
+            metacritic: juego.metacritic
+        }
+    })
+
     return ( 
         <> 
             <h1>Buscador</h1> 
@@ -82,13 +93,13 @@ export const BuscadorScreen = () => {
                             No existe el juego: { busqueda } 
                         </div> 
                     } 
+
  
                     { 
                         //Recorremos el resultado de la búsqueda de los juegos. 
-                        juegosFiltrados?.map(juego => ( 
-                            <InfoVideojuegos key={juego.id} 
-                                      juego={juego}/> 
-                        )) 
+                        
+                        <InfoVideojuegos juegos={juegos}/> 
+                    
                     } 
  
                 </div> 
