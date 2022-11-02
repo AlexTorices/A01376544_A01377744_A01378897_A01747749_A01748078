@@ -5,8 +5,13 @@ import { UserContext } from '../UserContext'
 import { json, Link, NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
-    const { user } = useContext(UserContext);
+    const { user, setUser } = useContext(UserContext);
     console.log(user);
+
+    const handleLogOut = () => {
+        setUser({});
+        console.log(user);
+    }
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
             <Link className="navbar-brand"
@@ -41,6 +46,7 @@ tiene que indicar y enviar al Router.
                         className={({ isActive }) => isActive ? "active" : "nav-item nav-link"}
                         exact="true"
                         to="/Login"
+                        handleLogOut
                     >
                         Salir
                     </NavLink>
