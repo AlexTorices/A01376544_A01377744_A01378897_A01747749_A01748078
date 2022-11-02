@@ -23,7 +23,7 @@ export const VideojuegosApp = () => {
             <ol className="list-group list-group-numbered">
                 {
                     generos.map(genero => {
-                        return <ResultadoVideojuegos key = {genero} genero = {genero}/>
+                        return <ResultadoVideojuegos key={genero} genero={genero} />
                     })
                 }
             </ol>
