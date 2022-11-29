@@ -1,0 +1,324 @@
+- db.Usuario.find( { "correo" : "alexmail@gmail.com" } )
+
+[
+  {
+    _id: ObjectId("6373fbd2c5efb1b794a2f81b"),
+    nombre: 'Alex Leyva',
+    avatar: 'string',
+    username: 'alxleymar',
+    password: 'pwd',
+    fecha_registro: '15-11-2022',
+    correo: 'alexmail@gmail.com',
+    coleccion: [
+      {
+        username: 'alxleymar',
+        _id: '28',
+        nombre_juego: 'Left 4 Dead 2',
+        plataforma: 'xbox',
+        comentarios: 'Excelente juego'
+      }
+    ]
+  },
+  {
+    _id: ObjectId("63740f98c5efb1b794a2f81c"),
+    nombre: 'Alex Leyva',
+    avatar: 'string',
+    username: 'alxleymar',
+    password: 'pwd',
+    fecha_registro: '15-11-2022',
+    correo: 'alexmail@gmail.com',
+    coleccion: [
+      {
+        username: 'alxleymar',
+        _id: '28',
+        nombre_juego: 'Left 4 Dead 2',
+        plataforma: 'xbox',
+        comentarios: 'Excelente juego'
+      }
+    ]
+  }
+]
+
+- db.Usuario.find( { "coleccion.username" : "alxleymar" } )
+
+[
+  {
+    _id: ObjectId("6373fbd2c5efb1b794a2f81b"),
+    nombre: 'Alex Leyva',
+    avatar: 'string',
+    username: 'alxleymar',
+    password: 'pwd',
+    fecha_registro: '15-11-2022',
+    correo: 'alexmail@gmail.com',
+    coleccion: [
+      {
+        username: 'alxleymar',
+        _id: '28',
+        nombre_juego: 'Left 4 Dead 2',
+        plataforma: 'xbox',
+        comentarios: 'Excelente juego'
+      }
+    ]
+  },
+  {
+    _id: ObjectId("63740f98c5efb1b794a2f81c"),
+    nombre: 'Alex Leyva',
+    avatar: 'string',
+    username: 'alxleymar',
+    password: 'pwd',
+    fecha_registro: '15-11-2022',
+    correo: 'alexmail@gmail.com',
+    coleccion: [
+      {
+        username: 'alxleymar',
+        _id: '28',
+        nombre_juego: 'Left 4 Dead 2',
+        plataforma: 'xbox',
+        comentarios: 'Excelente juego'
+      }
+    ]
+  }
+]
+
+- db.Usuario.find( { "coleccion.username" : "alxleymar" }, { "coleccion.nombre_juego" : /a/ })
+
+[
+  {
+    _id: ObjectId("6373fbd2c5efb1b794a2f81b"),
+    coleccion: [ { nombre_juego: /a/ } ]
+  },
+  {
+    _id: ObjectId("63740f98c5efb1b794a2f81c"),
+    coleccion: [ { nombre_juego: /a/ } ]
+  }
+]
+
+- db.Usuario.find( { "coleccion.username" : "alxleymar" }, { "coleccion.plataforma" : "xbox" })
+
+[
+  {
+    _id: ObjectId("6373fbd2c5efb1b794a2f81b"),
+    coleccion: [ { plataforma: 'xbox' } ]
+  },
+  {
+    _id: ObjectId("63740f98c5efb1b794a2f81c"),
+    coleccion: [ { plataforma: 'xbox' } ]
+  }
+]
+
+- db.logs.find( { "username" : "mariana" } )
+
+info_videojuegos> db.logs.find( { "username" : "mariana" } )
+[
+  {
+    _id: ObjectId("63742661da91c25337adc351"),
+    id: '1',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'entrada'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc355"),
+    id: '5',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'salida'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc359"),
+    id: '9',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc35a"),
+    id: '10',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc35b"),
+    id: '11',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc35c"),
+    id: '12',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc35d"),
+    id: '13',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  }
+]
+
+- db.logs.find( { "fecha" : "15-11-2022" } )
+
+[
+  {
+    _id: ObjectId("63742661da91c25337adc351"),
+    id: '1',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'entrada'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc352"),
+    id: '2',
+    username: 'ferleymar',
+    fecha: '15-11-2022',
+    evento: 'entrada'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc353"),
+    id: '3',
+    username: 'fermtz',
+    fecha: '15-11-2022',
+    evento: 'entrada'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc354"),
+    id: '4',
+    username: 'juan',
+    fecha: '15-11-2022',
+    evento: 'entrada'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc355"),
+    id: '5',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'salida'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc356"),
+    id: '6',
+    username: 'ferleymar',
+    fecha: '15-11-2022',
+    evento: 'salida'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc357"),
+    id: '7',
+    username: 'fermtz',
+    fecha: '15-11-2022',
+    evento: 'salida'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc358"),
+    id: '8',
+    username: 'juan',
+    fecha: '15-11-2022',
+    evento: 'salida'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc359"),
+    id: '9',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc35a"),
+    id: '10',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc35b"),
+    id: '11',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc35c"),
+    id: '12',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc35d"),
+    id: '13',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc35e"),
+    id: '14',
+    username: 'ferleymar',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc35f"),
+    id: '15',
+    username: 'ferleymar',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc360"),
+    id: '16',
+    username: 'ferleymar',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc361"),
+    id: '17',
+    username: 'ferleymar',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc362"),
+    id: '18',
+    username: 'ferleymar',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc363"),
+    id: '19',
+    username: 'fermtz',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  },
+  {
+    _id: ObjectId("63742661da91c25337adc364"),
+    id: '20',
+    username: 'fermtz',
+    fecha: '15-11-2022',
+    evento: 'agregar_juego'
+  }
+]
+
+- db.logs.find({ $and: [{ "username" : "mariana" }, {"evento" : /entrada/}]} )
+
+[
+  {
+    _id: ObjectId("63742661da91c25337adc351"),
+    id: '1',
+    username: 'mariana',
+    fecha: '15-11-2022',
+    evento: 'entrada'
+  }
+]
+
+
+
+
+

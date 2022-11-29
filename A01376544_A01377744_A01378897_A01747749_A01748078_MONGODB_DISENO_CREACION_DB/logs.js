@@ -1,0 +1,33 @@
+db.logs.insertOne({"id": "1", "username":"mariana", "fecha":"15-11-2022", "evento":"entrada"})
+db.logs.insertOne({"id": "2", "username":"ferleymar", "fecha":"15-11-2022", "evento":"entrada"})
+db.logs.insertOne({"id": "3", "username":"fermtz", "fecha":"15-11-2022", "evento":"entrada"})
+db.logs.insertOne({"id": "4", "username":"juan", "fecha":"15-11-2022", "evento":"entrada"})
+
+db.logs.insertOne({"id": "5", "username":"mariana", "fecha":"15-11-2022", "evento":"salida"})
+db.logs.insertOne({"id": "6", "username":"ferleymar", "fecha":"15-11-2022", "evento":"salida"})
+db.logs.insertOne({"id": "7", "username":"fermtz", "fecha":"15-11-2022", "evento":"salida"})
+db.logs.insertOne({"id": "8", "username":"juan", "fecha":"15-11-2022", "evento":"salida"})
+
+db.logs.insertOne({"id": "9", "username":"mariana", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "10", "username":"mariana", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "11", "username":"mariana", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "12", "username":"mariana", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "13", "username":"mariana", "fecha":"15-11-2022", "evento":"agregar_juego"})
+
+db.logs.insertOne({"id": "14", "username":"ferleymar", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "15", "username":"ferleymar", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "16", "username":"ferleymar", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "17", "username":"ferleymar", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "18", "username":"ferleymar", "fecha":"15-11-2022", "evento":"agregar_juego"})
+
+db.logs.insertOne({"id": "19", "username":"fermtz", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "20", "username":"fermtz", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "21", "username":"fermtz", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "22", "username":"fermtz", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "23", "username":"fermtz", "fecha":"15-11-2022", "evento":"agregar_juego"})
+
+db.logs.insertOne({"id": "24", "username":"juan", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "25", "username":"juan", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "26", "username":"juan", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "27", "username":"juan", "fecha":"15-11-2022", "evento":"agregar_juego"})
+db.logs.insertOne({"id": "28", "username":"juan", "fecha":"15-11-2022", "evento":"agregar_juego"})
