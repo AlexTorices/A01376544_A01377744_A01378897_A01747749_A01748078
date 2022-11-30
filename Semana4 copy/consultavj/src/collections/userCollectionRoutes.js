@@ -12,12 +12,23 @@ module.exports = function(app) {
   app.route('/user/:correo') 
     .get(userCollection.obtener_usuario); 
 
-  app.route('/user/:correo/:contra') 
+  app.route('/login/:correo/:contra') 
     .get(userCollection.obtener_autenticacion); 
 
-  app.route('/user/coleccion/:correo')
+    app.route('/user/coleccion/:usuario')
     .post(userCollection.agregar_coleccion);
 
+  app.route('/user/coleccion/:usuario/:clave')
+    .get(userCollection.obtener_coleccion);
+
+    app.route('/user/coleccion/consola/:usuario/:clave')
+    .get(userCollection.obtener_coleccion_consola);
+
+  app.route('/log/:usuario')
+    .get(userCollection.obtener_logs_usuario);
+
+  app.route('/log/:usuario/:clave')
+    .get(userCollection.obtener_logs_usuario_palabra_clave);
 
 };
 
