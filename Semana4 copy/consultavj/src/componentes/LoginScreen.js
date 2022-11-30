@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { UserContext } from './UserContext'
+import { useNavigate } from 'react-router-dom';
 
-const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://127.0.0.1:27017";
-const dbName = "Usuario"
 
 export const LoginScreen = () => {
+
+    const navigate = useNavigate();
 
     const { setUser } = useContext(UserContext);
 
@@ -13,7 +13,7 @@ export const LoginScreen = () => {
         <>
             <h1>Login</h1>
             <hr />
-            <form>
+            <form id='loginForm'>
                 <label>Email</label>
                 <input type='email' id='email' required>
                 </input>
@@ -26,8 +26,15 @@ export const LoginScreen = () => {
                     const email = document.getElementById('email').value
                     const password = document.getElementById('password').value
 
-                    if (password == dbPassword) {
+                    const dbPassword = 'lol'
 
+                    if (password === dbPassword) {
+                        setUser({
+                            _id: 1,
+                            nombre: 'as', 
+                            correo: email
+                        });
+                        navigate("/Videojuegos");
                     }
 
                     }}>
